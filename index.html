@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#7b5a46">
+<title>Ahmed & Hager | Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:#f8f4ef;color:#4b4039;font-family:Cairo,Arial,sans-serif}
+.cover{position:fixed;inset:0;z-index:50;background:linear-gradient(145deg,#fbf7f2,#eadfd3);display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;transition:.8s}
+.cover.hide{opacity:0;visibility:hidden;pointer-events:none}
+.cover-card{max-width:560px;width:100%;padding:44px 25px;border:1px solid #d8c7b6;border-radius:28px;background:rgba(255,255,255,.55);box-shadow:0 20px 70px rgba(76,54,39,.13)}
+.bismillah{font-family:Amiri,serif;font-size:28px;margin-bottom:22px}
+.cover h1{font-family:Amiri,serif;font-size:48px;margin:8px 0;color:#6e4e3a}
+.cover p{font-size:16px;color:#77685e}
+.open{border:0;background:#6e4e3a;color:#fff;border-radius:999px;padding:14px 30px;font:600 16px Cairo;cursor:pointer;box-shadow:0 10px 25px rgba(110,78,58,.25)}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:70px 20px;background:
+radial-gradient(circle at 15% 15%,rgba(184,147,113,.18),transparent 28%),
+radial-gradient(circle at 85% 85%,rgba(184,147,113,.18),transparent 28%)}
+.container{max-width:900px;margin:auto}.ornament{font-size:30px;color:#a77d5d;letter-spacing:8px}
+.hero h1{font-family:Amiri,serif;font-size:clamp(58px,12vw,110px);font-weight:400;line-height:.95;margin:20px 0;color:#624633}
+.amp{font-size:.55em;color:#aa8263}
+.hero .date{font-size:20px;margin:18px 0}.subtitle{font-family:Amiri,serif;font-size:22px}
+section{padding:72px 20px}.section-title{font-family:Amiri,serif;text-align:center;font-size:38px;color:#624633;margin:0 0 28px}
+.ayah{max-width:820px;margin:auto;background:#fffdfb;border:1px solid #dfd0c1;border-radius:24px;padding:30px;font-family:Amiri,serif;font-size:28px;line-height:2;text-align:center;box-shadow:0 12px 35px rgba(73,52,38,.06)}
+.events{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;max-width:900px;margin:auto}
+.card{background:#fffdfb;border:1px solid #dfd0c1;border-radius:24px;padding:28px;text-align:center;box-shadow:0 12px 35px rgba(73,52,38,.06)}
+.card h3{font-family:Amiri,serif;font-size:30px;color:#705039;margin:0 0 8px}
+.card .bigdate{font-size:20px;font-weight:700;margin:12px 0}
+.card p{line-height:1.9;margin:8px 0}.map{display:inline-block;margin-top:15px;background:#705039;color:white;text-decoration:none;padding:11px 22px;border-radius:999px}
+.countdown{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;direction:ltr}
+.timebox{min-width:105px;background:#fffdfb;border:1px solid #dfd0c1;border-radius:20px;padding:17px 10px;text-align:center}
+.timebox b{display:block;font-size:34px;color:#6f503b}.timebox span{font-size:13px;color:#88786d}
+.guest{max-width:650px;margin:auto}.guest textarea{width:100%;min-height:130px;border:1px solid #d9c9ba;border-radius:18px;padding:15px;font:16px Cairo;resize:vertical;background:#fffdfb}.guest button{margin-top:12px;border:0;border-radius:999px;background:#705039;color:#fff;padding:13px 25px;font:600 15px Cairo;cursor:pointer}
+.note{text-align:center;color:#81736a;font-size:13px;margin-top:10px}
+footer{text-align:center;padding:45px 20px;color:#8a786a;font-family:Amiri,serif;font-size:21px}
+@media(max-width:700px){.events{grid-template-columns:1fr}.cover h1{font-size:42px}.ayah{font-size:23px}.timebox{min-width:78px}.timebox b{font-size:28px}}
+</style>
+</head>
+<body>
+
+<div class="cover" id="cover">
+  <div class="cover-card">
+    <div class="bismillah">بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ</div>
+    <div class="ornament">✦ ✦ ✦</div>
+    <h1>Ahmed & Hager</h1>
+    <p>دعوة زفاف</p>
+    <button class="open" onclick="openInvitation()">اضغط لفتح الدعوة ♥</button>
+  </div>
+</div>
+
+<audio id="weddingMusic" loop preload="auto">
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<main>
+<section class="hero">
+  <div class="container">
+    <div class="ornament">✦</div>
+    <div class="subtitle">بكل الحب والسعادة</div>
+    <h1>Ahmed <span class="amp">&</span> Hager</h1>
+    <div class="subtitle">نحتفل معًا ببداية أجمل حكاية</div>
+    <div class="date">15 & 16 أكتوبر 2026</div>
+    <div class="ornament">✦ ✦ ✦</div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">قال تعالى</h2>
+  <div class="ayah">«وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً»</div>
+</section>
+
+<section>
+  <h2 class="section-title">موعدنا</h2>
+  <div class="events">
+    <article class="card">
+      <h3>ليلة الحنّة</h3>
+      <div class="bigdate">الخميس 15 أكتوبر 2026</div>
+      <p>أمام منزل والد العريس<br>بالميمونة</p>
+      <a class="map" target="_blank" rel="noopener" href="https://maps.app.goo.gl/oxcsLNmiUM6XqfHx7?g_st=ic">📍 موقع الحنّة</a>
+    </article>
+    <article class="card">
+      <h3>ليلة الزفاف</h3>
+      <div class="bigdate">الجمعة 16 أكتوبر 2026</div>
+      <p>قاعة البوريفاج<br>على طريق موقف الأحرام<br>أمام فيلا رجب أيوب و Circle K</p>
+      <a class="map" target="_blank" rel="noopener" href="https://maps.app.goo.gl/XF9UquWDrBCgnGU78?g_st=ic">📍 موقع القاعة</a>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">العد التنازلي</h2>
+  <div class="countdown">
+    <div class="timebox"><b id="days">0</b><span>يوم</span></div>
+    <div class="timebox"><b id="hours">0</b><span>ساعة</span></div>
+    <div class="timebox"><b id="minutes">0</b><span>دقيقة</span></div>
+    <div class="timebox"><b id="seconds">0</b><span>ثانية</span></div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">اترك لنا تهنئتك 🤍</h2>
+  <div class="guest">
+    <textarea id="message" placeholder="اكتب تهنئتك لأحمد وهاجر..."></textarea>
+    <button onclick="sendGreeting()">إرسال التهنئة</button>
+    <div class="note">سيتم تجهيز التهنئة للمشاركة عبر واتساب بعد إضافة رقم التواصل في الإعدادات.</div>
+  </div>
+</section>
+
+<footer>
+  Ahmed & Hager<br>
+  بارك الله لنا وبارك علينا وجمع بيننا في خير 🤍
+</footer>
+</main>
+
+<script>
+const WEDDING = new Date("2026-10-16T21:00:00+03:00").getTime();
+
+function openInvitation(){
+  document.getElementById('cover').classList.add('hide');
+  const music = document.getElementById('weddingMusic');
+  music.play().catch(()=>{});
+}
+
+function countdown(){
+  const now = Date.now(), diff = Math.max(0, WEDDING-now);
+  document.getElementById('days').textContent = Math.floor(diff/86400000);
+  document.getElementById('hours').textContent = Math.floor(diff/3600000)%24;
+  document.getElementById('minutes').textContent = Math.floor(diff/60000)%60;
+  document.getElementById('seconds').textContent = Math.floor(diff/1000)%60;
+}
+countdown(); setInterval(countdown,1000);
+
+function sendGreeting(){
+  const msg = document.getElementById('message').value.trim();
+  if(!msg){ alert('اكتب التهنئة أولاً ❤️'); return; }
+  const whatsappNumber = ''; // ضع رقم واتساب هنا بصيغة دولية مثل 2010XXXXXXXX
+  if(!whatsappNumber){
+    navigator.clipboard?.writeText(msg);
+    alert('تم نسخ التهنئة. أضف رقم واتساب في ملف index.html لتفعيل الإرسال المباشر.');
+    return;
+  }
+  window.open('https://wa.me/'+whatsappNumber+'?text='+encodeURIComponent('تهنئة من أحد ضيوف أحمد وهاجر:\\n'+msg),'_blank');
+}
+</script>
+</body>
+</html>
